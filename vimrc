@@ -13,6 +13,9 @@ set smartcase
 " Snippets are activated by Shift+Tab
 let g:snippetsEmu_key = "<S-Tab>"
 
+" ruby path for faster vim start
+let g:ruby_path = system('echo $HOME/.rbenv/shims')
+
 source $HOME/.vim/autocmd.vim
 source $HOME/.vim/colors.vim
 source $HOME/.vim/ctags.vim
