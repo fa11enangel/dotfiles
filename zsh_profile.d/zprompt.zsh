@@ -76,7 +76,8 @@ _red()                    { echo "$(_color "$1" red)" }
 _cyan()                   { echo "$(_color "$1" cyan)" }
 
 _bracket_wrap()           { echo "$(_grey "[") $1 $(_grey "]") " }
-_basic()                  { echo "$(_user_name)$(_colored_path)" }
+# _basic()                  { echo "$(_user_name)$(_colored_path)" }
+_basic()                  { echo "$(_colored_path)" }
 _colored_path()           { echo "$(_grey "%~")" }
 _colored_git_branch()     { echo "$(_git_prompt_color "$(_git_prompt_info)")" }
 _colored_git_difference() { echo "$(_yellow "$(_git_difference_from_track)")" }
