@@ -29,4 +29,10 @@ source $HOME/.vim/tab_completion.vim
 source $HOME/.vim/visual.vim
 source $HOME/.vim/tmux.vim
 
+" For Command-T
+call pathogen#helptags()
+" Ignore this files on listings (especially Command-T)
+set wildignore+=*.o,*.obj,.git,.svn,.cvs,tmp,cache
+
+" ...
 call pathogen#runtime_append_all_bundles()
