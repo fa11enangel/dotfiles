@@ -23,11 +23,6 @@ _grb() {
 }
 compdef _grb grb
 
-_cuc() {
-  compadd $(ls features/**/*.feature | sed "s/features\/\(.*\).feature/\1/")
-}
-compdef _cuc cuc
-
 _rake_does_task_list_need_generating() {
   if [[ ! -f .rake_tasks ]]; then return 0;
   else
@@ -117,7 +112,7 @@ compdef _cheat cheat
 _ack() {
   if (( CURRENT == 2 )); then
     if [[ -a tmp/tags ]]; then
-      compadd $(cat tmp/tags | awk '{print $1}')
+      compadd $(cut -f 1 tmp/tags | uniq)
     fi
   else;
     _files
