@@ -1,5 +1,5 @@
 bindkey ^R history-incremental-search-backward
-setopt correct
+# setopt correct
 
 autoload predict-on
 zle -N predict-on

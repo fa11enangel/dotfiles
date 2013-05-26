@@ -1,6 +1,8 @@
 set nocompatible
 
-let mapleader = "\\"
+let mapleader = ","
+nmap <leader>v :tabedit $MYVIMRC<CR>
+nmap <leader>ct :CommandT<CR>
 
 set nobackup
 set nowritebackup
@@ -28,6 +30,11 @@ source $HOME/.vim/syntax_highlighting.vim
 source $HOME/.vim/tab_completion.vim
 source $HOME/.vim/visual.vim
 source $HOME/.vim/tmux.vim
+
+" hamls sass
+" set runtimepath+=$HOME/.vim/vim-haml
+" filetype plugin indent on
+" syntax on
 
 " For Command-T
 call pathogen#helptags()
